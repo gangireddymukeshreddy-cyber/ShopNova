@@ -3,7 +3,7 @@
    Connected to Spring Boot backend
 ========================================== */
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://shopnova-backend-8a8u.onrender.com/api";
 
 let products = [];
 let cart = [];
