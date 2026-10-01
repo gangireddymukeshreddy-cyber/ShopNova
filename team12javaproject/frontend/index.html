@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNova - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <div class="logo">
+            <span class="logo-icon">S</span>
+            <span>ShopNova</span>
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <button onclick="searchProducts()">
+                🔍
+            </button>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button class="header-button">
+                ♡
+                <span>Wishlist</span>
+            </button>
+
+            <button
+                class="cart-button"
+                onclick="openCart()"
+            >
+                🛒
+                <span>Cart</span>
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navigation">
+
+    <div class="container nav-content">
+
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        
+        <a href="#deals">Deals</a>
+        <a href="#about">About</a>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-label">
+                NEW COLLECTION
+            </span>
+
+            <h1>
+                Everything you need.
+                <br>
+                All in one place.
+            </h1>
+
+            <p>
+                Discover quality products at great prices.
+                Shop smarter, live better.
+            </p>
+
+            <button
+                class="primary-button"
+                onclick="scrollToProducts()"
+            >
+                Shop Now →
+            </button>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="hero-circle">
+
+                <div class="hero-product">
+                    🛍️
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="container features-grid">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <div>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable delivery</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <div>
+                <h3>Secure Shopping</h3>
+                <p>Your data stays protected</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ↩️
+            </div>
+
+            <div>
+                <h3>Easy Returns</h3>
+                <p>Simple and hassle-free</p>
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💬
+            </div>
+
+            <div>
+                <h3>24/7 Support</h3>
+                <p>We're here to help</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section
+    class="products-section"
+    id="products"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    OUR STORE
+                </span>
+
+                <h2>Featured Products</h2>
+
+            </div>
+
+            <span
+                class="product-status"
+                id="productStatus"
+            >
+                Loading products...
+            </span>
+
+        </div>
+
+
+        <div
+            class="products-grid"
+            id="productsGrid"
+        >
+
+            <!-- Products loaded using JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DEAL BANNER ================= -->
+
+<section
+    class="deal-section"
+    id="deals"
+>
+
+    <div class="container">
+
+        <div class="deal-banner">
+
+            <div>
+
+                <span>
+                    LIMITED TIME OFFER
+                </span>
+
+                <h2>
+                    Great products.
+                    Better prices.
+                </h2>
+
+                <p>
+                    Find what you need without breaking the bank.
+                </p>
+
+            </div>
+
+            <button
+                onclick="scrollToProducts()"
+                class="deal-button"
+            >
+                Explore Deals →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+    class="about-section"
+    id="about"
+>
+
+    <div class="container about-content">
+
+        <div>
+
+            <span class="section-label">
+                ABOUT SHOPNOVA
+            </span>
+
+            <h2>
+                Shopping made simple.
+            </h2>
+
+        </div>
+
+        <p>
+            ShopNova brings products, great prices and a
+            simple shopping experience together in one place.
+            Browse our collection, add your favourites to your
+            cart and complete your order with ease.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <div class="logo footer-logo">
+
+                <span class="logo-icon">
+                    S
+                </span>
+
+                <span>
+                    ShopNova
+                </span>
+
+            </div>
+
+            <p>
+                Your everyday shopping destination.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Shop</h4>
+
+            <a href="#products">
+                Products
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="#deals">
+                Deals
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Support</h4>
+
+            <a href="#">
+                Help Center
+            </a>
+
+            <a href="#">
+                Shipping
+            </a>
+
+            <a href="#">
+                Returns
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <a href="#">
+                Contact Us
+            </a>
+
+            <a href="#">
+                Customer Service
+            </a>
+
+            <a href="#">
+                FAQ
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            © 2026 ShopNova. All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART SIDEBAR ================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="closeCart()"
+></div>
+
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+    <div class="cart-header">
+
+        <div>
+
+            <span class="section-label">
+                YOUR SHOPPING
+            </span>
+
+            <h2>Your Cart</h2>
+
+        </div>
+
+        <button
+            class="close-button"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <!-- Cart items loaded here -->
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="subtotal-row">
+
+            <span>Subtotal</span>
+
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+
+        </div>
+
+        <p class="tax-note">
+            Taxes and shipping calculated at checkout.
+        </p>
+
+        <button
+            class="checkout-button"
+            onclick="confirmOrder()"
+        >
+            Checkout →
+        </button>
+
+        <button
+            class="continue-button"
+            onclick="closeCart()"
+        >
+            Continue Shopping
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= TOAST ================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Product added to cart
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
